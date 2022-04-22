@@ -5,6 +5,8 @@ build-backend = "flit_core.buildapi"
 [project]
 name = "projectupload"
 authors = [{name = "Ben Graney Green", email = "bengraneygreen@asana.com"}]
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
 dynamic = ["version", "description"]
 
 [tool.flit.sdist]
