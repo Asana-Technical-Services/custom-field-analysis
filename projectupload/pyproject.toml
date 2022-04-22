@@ -10,4 +10,7 @@ classifiers = ["License :: OSI Approved :: MIT License"]
 dynamic = ["version", "description"]
 
 [tool.flit.sdist]
-include = ["./src/","./src/asanaUtils/","./asanaUtils/"]
+include = ["src/*","src/asanaUtils/*","asanaUtils/*",]
+
+[tool.flit.external-data]
+directory = "src"
