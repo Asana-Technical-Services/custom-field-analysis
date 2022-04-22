@@ -1,0 +1,11 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "projectupload"
+authors = [{name = "Ben Graney Green", email = "bengraneygreen@asana.com"}]
+dynamic = ["version", "description"]
+
+[tool.flit.sdist]
+include = ["./src/","./src/asanaUtils/","./asanaUtils/"]
