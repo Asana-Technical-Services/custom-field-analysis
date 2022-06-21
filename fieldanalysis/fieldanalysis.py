@@ -2,6 +2,7 @@
 
 __version__ = "0.1"
 
+import enum
 from operator import truediv
 import os
 import asyncio
@@ -37,14 +38,14 @@ async def projectupload():
         results = []
         limit = 100
         offset = ""
-        url = f"/workspaces/{workspace}/projects?limit={limit}&opt_fields=custom_field_settings.custom_field"
+        url = f"/workspaces/{workspace}/projects?limit={limit}&opt_fields=custom_field_settings.custom_field.(name|type|created_by|enum_options|is_global_to_workspace).(name|email)"
 
         totalcount = 0
 
         while hasMore == True:
 
             if offset != "":
-                url = f"/workspaces/{workspace}/projects?limit={limit}&opt_fields=custom_field_settings.custom_field&offset={offset}"
+                url = f"/workspaces/{workspace}/projects?limit={limit}&opt_fields=custom_field_settings.custom_field.(name|type|created_by|enum_options|is_global_to_workspace).(name|email)&offset={offset}"
 
             result = await asana_client(
                 **{
@@ -75,7 +76,10 @@ async def projectupload():
                     else:
                         customFieldCounter[
                             customFieldSetting["custom_field"]["gid"]
-                        ] = customFieldSetting["custom_field"]
+                        ] = flatten_custom_field_values(
+                            customFieldSetting["custom_field"]
+                        )
+
                         customFieldCounter[customFieldSetting["custom_field"]["gid"]][
                             "count"
                         ] = 1
@@ -85,10 +89,21 @@ async def projectupload():
 
         fileName = "Asana_Custom_Field_Audit_Sheet.csv"
 
-        headers = ["gid", "count", "name", "type"]
+        headers = [
+            "gid",
+            "count",
+            "name",
+            "type",
+            "created_by_name",
+            "created_by_email",
+            "is_global_to_workspace",
+            "enum_value_names",
+        ]
 
         with open(fileName, "w") as csvfile:
-            writer = csv.DictWriter(csvfile, fieldnames=headers, extrasaction="ignore")
+            writer = csv.DictWriter(
+                csvfile, fieldnames=headers, restval="", extrasaction="ignore"
+            )
             writer.writeheader()
             writer.writerows(list(customFieldCounter.values()))
 
@@ -119,3 +134,21 @@ if __name__ == "__main__":
             sys.exit(0)
         except SystemExit:
             os._exit(0)
+
+
+def flatten_custom_field_values(custom_field):
+
+    if "enum_values" in custom_field:
+        new_enum_values = []
+        custom_field["enum_values"] = list(custom_field["enum_values"])
+        for value in custom_field["enum_values"]:
+            new_enum_values.append(dict(value)["name"])
+
+        custom_field["enum_value_names"] = new_enum_values
+
+    if "created_by" in custom_field and custom_field["created_by"] != None:
+        custom_field["created_by"] = dict(custom_field["created_by"])
+        custom_field["created_by_email"] = custom_field["created_by"]["email"]
+        custom_field["created_by_name"] = custom_field["created_by"]["name"]
+
+    return custom_field
