@@ -1,0 +1,361 @@
+gid,count,name,type
+1201932156952852,57,Estimated hours,number
+1201932155895771,18,Actual hours,number
+1201932078947097,7,Expected effort,text
+1201932077022622,3,Score,enum
+1201932076420207,2,Planning Category,enum
+1201932078124426,2,Status,enum
+1201932171892723,1,Approved?,enum
+1201932153630539,1,Progress 1200184393628725,enum
+1201932078963211,1,Launch phase,enum
+1201932076044915,1,PM task type,enum
+1201932033795757,1,Actual effort,text
+1201932076821913,1,Expected time,number
+1201932171140050,1,Actual time,number
+1201932153903165,1,Type of bug,enum
+1201932077543774,1,Bug Status,enum
+1201932035166632,2,Bug Priority,enum
+1201932076912434,2,Bug Severity,enum
+1201932077791542,1,Client Status,enum
+1201932077613792,1,Finance function,enum
+1201932156324926,1,Task status,enum
+1201932153077703,1,Related URL,text
+1201932153669996,1,Feedback (optional),enum
+1201932075946825,1,Affiliate platform,enum
+1201932153265416,1,Type of task,enum
+1201932077108619,4,Estimated cost,number
+1201932155579271,27,Priority,enum
+1201932035253391,3,Minutes,number
+1201932076430846,2,Progress (%),enum
+1201932035713295,3,Position,text
+1201932076784370,1,Interview stage,enum
+1201932076528754,1,Hiring status,enum
+1201932034160135,1,Training audience,enum
+1201932153273908,2,Onboarding activity,enum
+1201932035172375,1,Progress,enum
+1201932076075392,1,Team,text
+1201932079375455,1,Product-OKR Status,enum
+1201932152955158,1,Project Type,enum
+1201932076486143,1,Existing Design File,enum
+1201932153533606,7,Department requesting,enum
+1201932157120440,1,Deliverables,enum
+1201932035339092,1,Status:,enum
+1201932076556910,1,Next steps,enum
+1201932035047524,1,POC,text
+1201932078947119,1,Lead Contact Number,text
+1201932154611920,1,Lead Source,enum
+1201932034030306,1,Lead Type,enum
+1201932078096324,1,Email address,text
+1201932155031759,1,Potential Opportunity,number
+1201932077935291,1,Sales status,enum
+1201932153964213,1,Status?,enum
+1201932075799125,2,Web Production status,enum
+1201932171074896,3,Estimated Points,number
+1201932172591957,3,Dev Type,enum
+1201932078379005,1,Status,enum
+1201932075826261,1,Type,enum
+1201932154058432,4,Requesting Team,enum
+1201932033610909,1,Triaged to team,enum
+1201932153790276,1,Responsible Party,enum
+1201932155444111,1,Status of blog post,enum
+1201932034783084,1,Ready to write/edit,enum
+1201932152953013,1,Estimated time to full launch,enum
+1201932153891352,4,Languages Supported,multi_enum
+1201932076297449,1,Regions Supported,multi_enum
+1201932033554498,1,Content Stage (QGEC),enum
+1201932079654757,1,Content Type (QGEC),enum
+1201932157078477,6,Content Channel,enum
+1201932075765468,1,URL,text
+1201932153337005,1,1d7 Users,number
+1201932171077096,1,Action Name,enum
+1201932076753822,1,Action Date,text
+1201932077371014,1,Name,text
+1201932153684901,1,First Name,text
+1201932075983556,1,Last Name,text
+1201932033198155,1,Visited D7,number
+1201932154703666,1,Domain ID,number
+1201932032573081,2,Creation stage,enum
+1201932035436449,8,Approved?,enum
+1201932153722976,2,Meeting Needed,enum
+1201932153742266,10,Approval stage,enum
+1201932155224329,5,X-Function,enum
+1201932077916884,5,Event Type,enum
+1201932077750237,7,Cost,number
+1201932033079636,4,Region of Request,enum
+1201932154267909,16,Design Support,enum
+1201932034424342,3,Legal Review Status,enum
+1201932078500224,3,Region,enum
+1201932154233025,5,Status of Work,enum
+1201932075664224,1,Approval Status,enum
+1201932156345052,2,Content stage,enum
+1201932076056625,1,Content type,enum
+1201932034075317,2,Referral,enum
+1201932078112550,2,Department,text
+1201932032830456,14,Task Progress,enum
+1201932156865091,2,Product stage,enum
+1201932155065496,2,Project size,enum
+1201932156854715,1,Added by,enum
+1201932153008723,1,Extra Support Needed,enum
+1201932077517020,1,Status,enum
+1201932035453368,6,Estimated value,number
+1201932076887305,4,Sales Region,enum
+1201932075927349,2,Sales Lead status,enum
+1201932035655077,1,Legal Request,enum
+1201932154331059,1,Priority,enum
+1201932155835021,1,Requesting Team,enum
+1201932153730431,1,Estimated Effort,enum
+1201932153888230,1,Ops Request Type,enum
+1201932154320463,1,Facilities sub-request,enum
+1201932153535685,1,Vendor subrequest,enum
+1201932155091372,1,Business Operations Subrequest,enum
+1201932034633227,1,Requestor Name,text
+1201932078824559,2,Requester Email,text
+1201932032558129,4,Total Budget,number
+1201932153279325,1,Score,enum
+1201932078072446,9,Usage,number
+1201932154286311,10,NPS,number
+1201932079882748,1,Office Location,enum
+1201932078939837,1,Urgency,enum
+1201932078770612,1,Email,text
+1201932153569741,1,Phone Number,text
+1201932034984051,4,Opportunity stage,enum
+1201932033909188,1,Customer Department,enum
+1201932153451905,1,Customer Role,enum
+1201932076717978,1,Customer Email,text
+1202294189396554,1,Responsible Role,enum
+1201932035757533,1,Priority,enum
+1201932079615986,1,Task Progress,enum
+1201932079375473,1,Bug Reported by,enum
+1201932033012002,1,Component,enum
+1201932153881652,1,Score,enum
+1201932035614781,1,NPS,number
+1201932076879887,1,Score,enum
+1201932079994034,1,NPS,number
+1201932155024091,1,Annual Contract Value (ACV),number
+1201932033573068,1,Account name,text
+1201932034289444,1,Sentiment,enum
+1201932034340383,1,Feedback type,enum
+1201932153548242,1,Actionable,enum
+1201932078170051,1,Customer Training Status,enum
+1201932155780920,16,Department/Team Responsible,enum
+1201932079387188,1,Score,enum
+1201932034912768,1,Score,enum
+1201932033224635,1,Score,enum
+1201932154303526,1,Score,enum
+1201932033589169,1,Score,enum
+1201932076300761,1,Score,enum
+1201932032642330,1,Type,enum
+1201932035673471,1,Responsible,enum
+1201932032778463,1,Priority,enum
+1201932034769995,1,Type,enum
+1201932033993032,1,Responsible,enum
+1201932156619657,1,Priority,enum
+1201932156322491,1,Owner,enum
+1201932156609702,1,Estimated hours,number
+1201932035233295,1,Owner,enum
+1201932034445520,1,Priority,enum
+1201932155794769,1,Region,enum
+1201932034275702,1,Latitude,number
+1201932035382685,1,Longitude,number
+1201932153059488,1,Team,enum
+1201932078899396,1,Type,enum
+1201932076926975,1,Approval stage,enum
+1201932035039983,1,Estimated Hours,number
+1201932171202241,1,Points,number
+1201932155208594,1,Approved?,enum
+1201932033452265,1,Agenda Item Type,enum
+1201932155532893,1,Email,text
+1201932079981331,1,Phone Number,text
+1201932033516981,2,Campaign channel,enum
+1201932077407029,1,Status:,enum
+1201932156655188,1,Department,enum
+1201932078093021,1,Estimated Cost,number
+1201932153495024,1,Priority,enum
+1201932156162076,1,Agenda Item Type,enum
+1201932171220378,1,Agenda Item Type,enum
+1201932156278944,1,Use Case,enum
+1201932155170792,1,Budgeted Cost,number
+1201932032763725,1,Actual Current Cost,number
+1201932171086904,1,Agenda Item Type,enum
+1201932155479662,1,Region of Request,enum
+1201932034388103,1,Priority,enum
+1201932078047067,1,Estimated hours,number
+1201932079965787,1,Intake Project Type,enum
+1201932034377764,1,Scope,enum
+1201932075776526,1,Team Responsible,enum
+1201932034002748,1,Estimated hours,number
+1201932035233202,1,Task Progress,enum
+1201932032712864,1,Team/Department,enum
+1201932076720222,1,Priority Estimate,enum
+1201932076930293,1,Estimated hours,number
+1201932155450457,1,Status,enum
+1201932035036751,1,Priority,enum
+1201932171019245,1,Estimated Cost,number
+1201932033770197,1,Office,enum
+1201932154010968,1,Guests,enum
+1201932155610175,1,Point of Contact,text
+1201932154584639,1,Time it Takes to Complete Tasks,enum
+1201932032642333,1,Sphere of Responsibility,enum
+1201932033232248,1,Budget,number
+1201932078112613,1,Priority,enum
+1201932156577578,1,Point of Contact,enum
+1201932080031306,1,Time it Takes to Complete Tasks,enum
+1201932075718637,1,Convention Type,enum
+1201932154279891,1,Client Onboarding categories,enum
+1201932079958239,1,ISBN,enum
+1201932078965350,1,Book Author,enum
+1201932076556917,1,Loan Status,enum
+1201932078279853,1,Loaned By,enum
+1201932076466666,1,Content channel,enum
+1201932154235133,1,Content stage,enum
+1201932076849796,1,Team,enum
+1201932034455136,1,Progress,enum
+1201932171087006,1,Name of Foundation,enum
+1201932155323360,1,Funding Amount,number
+1201932157202789,1,Grant Application Process,enum
+1201932153641019,1,Name of Foundation,text
+1201932171066429,1,Funding Amount,number
+1201932155876159,1,Grant Application Process,enum
+1201932033909211,1,Name of Foundation,enum
+1201932079861684,1,Funding Amount,number
+1201932078902517,1,Grant Application Process,enum
+1201932171103317,1,Name of Foundation,enum
+1201932155219082,1,Grant Application Process,enum
+1201932155551974,1,Name of Foundation,enum
+1201932079652591,1,Funding Amount,number
+1201932153536758,1,Grant Application Process,enum
+1201932032523709,1,Contact,text
+1201932076595029,1,Phone Number,number
+1201932034598304,1,Minutes,number
+1201932155370280,1,Resource Type,enum
+1201932155952456,1,Progress,enum
+1201932155467969,1,Team,enum
+1201932156353307,1,Priority,enum
+1201932076335647,1,Creative Type,enum
+1201932154512845,1,Stage:,enum
+1201932076898864,1,Map to Objective,number
+1201932078256504,1,Grade Level,enum
+1201932154762123,1,Task Progress,enum
+1201932155584397,1,Map to Objective,number
+1201932153298653,1,Progress,enum
+1201932076665231,1,Asana Way of Change,enum
+1201932076313830,1,Task Type,enum
+1201932076780976,1,Timeline,enum
+1201932155065507,1,AWoC Role,enum
+1201932171084735,1,Asana Way of Change,enum
+1201932078965343,1,Timeline,enum
+1201932033407524,1,Idea Status,enum
+1201932155894536,1,Favorite Idea,enum
+1201932077715786,1,Team Responsible,enum
+1201932076501110,1,Estimated hours,number
+1201932155811080,1,Type,enum
+1201932153249985,1,Responsible,enum
+1201932033422377,1,Priority,enum
+1201932076325404,1,Email,text
+1201932034703743,1,Phone Number,text
+1201932080046156,1,Email,text
+1201932035762871,1,Phone Number,text
+1201932155398438,1,Email,text
+1201932032719329,1,Phone Number,text
+1201932032596722,1,Email,text
+1201932032636892,1,Phone Number,text
+1201932156488397,1,Email,text
+1201932078003832,1,Phone Number,text
+1201932153439212,1,Email,text
+1201932035468375,1,Phone Number,text
+1201932076442245,1,Parent Task,enum
+1201932171560663,1,Sales Issue,enum
+1201932079208054,2,Support Tier,enum
+1201932078828846,2,Escalated to Team,enum
+1201932033681141,3,Case Stage,enum
+1201932035264995,2,Case Topic,enum
+1201932033556686,17,Priority 1200900983001872,enum
+1201932154266757,1,Type of request,enum
+1201932079659006,1,URL,text
+1201932034018756,1,Owner,enum
+1201932156300617,1,Estimated hours,number
+1201932078072464,1,Sales Issue,enum
+1201932154190578,1,Status of Work,enum
+1201932079746505,1,Status of Work,enum
+1201932155866492,1,Status,enum
+1201932033578486,1,Product Theme,enum
+1201932076666358,1,Planned Vs Unplanned,enum
+1201932078906789,1,Story Points,number
+1201932155087076,1,Team.,enum
+1201932153807295,1,New Feature or Enhancement?,enum
+1201932077458593,1,Requires New Documentation and Internal Training?,enum
+1201932034875520,1,Sales/Marketing Critical,enum
+1201932033065103,1,Est Story Points,number
+1201932032966810,1,Feature/Enhancement Request?,enum
+1201932079375607,1,Release Date Confidence,enum
+1201932077631985,1,Github URL,enum
+1201932079782124,1,Associated Jira Board,enum
+1201932076802504,1,Status,enum
+1201932032857281,1,Product Theme,enum
+1201932153641079,1,Planned Vs Unplanned,enum
+1201932080038877,1,Story Points,number
+1201932076704436,1,Team.,enum
+1201932077547031,1,New Feature or Enhancement?,enum
+1201932156397535,1,Requires New Documentation and Internal Training?,enum
+1201932155895756,1,Sales/Marketing Critical,enum
+1201932155369246,1,Est Story Points,number
+1201932154217320,1,Feature/Enhancement Request?,enum
+1201932153903324,1,Release Date Confidence,enum
+1201932076134141,1,Github URL,enum
+1201932035004251,1,Associated Jira Board,enum
+1201932156261496,1,Status of Work,enum
+1201932033437089,1,Status of Work,enum
+1201932033628958,1,Status of Work,enum
+1201932033984560,1,Status of Work,enum
+1201932155595046,1,Status of Work,enum
+1201932079199203,2,Approval stage,enum
+1201932075786075,1,Proposed Budget,text
+1201932033751206,1,Due Date (imported),text
+1201932078696751,1,Convention Type,enum
+1201932032904758,2,Point of Contact,text
+1201932035416444,2,Time it Takes to Complete Tasks,enum
+1201932078096232,1,Sales Figures ,number
+1201932077570087,1,Restaurant ,text
+1201932153633689,1,Position,text
+1201932153204372,1,Referral,enum
+1201932078506679,1,Department,text
+1201932079642963,1,Copy of Approval stage,enum
+1201932171572072,5,Task Progress,enum
+1201932155941622,1,Approved?,enum
+1201932171468843,1,Priority,enum
+1201932171656020,1,Product Area,enum
+1201932157419429,1,Launch Tier,enum
+1201932081615076,1,Regions Involved,multi_enum
+1201932157172552,3,Responsible Team,enum
+1201932171993016,1,Status of Work,enum
+1201932158538947,1,Email,text
+1201932158355447,1,Phone Number,text
+1201932702991725,1,Evidence,text
+1201932702991727,1,Stage,enum
+1201932702991754,1,Submitter email,text
+1201932702991757,1,Collaborator emails,text
+1201951958936615,1,Asset Size,enum
+1201951958936622,1,Estimated Days to Complete,number
+1201951958936647,1,Project Owner,enum
+1201951958936651,1,Request Type,enum
+1201951958936656,1,Project Requestor,text
+1201951958936658,1,Launch Date,text
+1201951958936660,1,Total Assets Requested,number
+1201951958936662,1,Asset Estimated Time to Complete,number
+1201951958936664,1,Estimated Date Range of Project,number
+1201951958936666,1,Estimated Delivery Date,enum
+1201951958936669,1,Overall Project Size,enum
+1201952089353314,1,Requesting Org,enum
+1201951958936675,1,Region (EE),enum
+1201951958936679,1,Comms Lead,enum
+1201951958936683,1,Copy Doc,enum
+1201951958936686,1,Comms/Tech Status,enum
+1202022467287738,1,[Jira] Points,number
+1202074562741812,3,Minutes,number
+1201932078306636,1,Vendor Website,text
+1202239952082424,1,stage,enum
+1202276182665002,1,Cost Category,enum
+1202276182665007,1,cost,number
+1202294336242025,1,Priority,enum
+1202294336253190,1,Point of Contact,enum
+1202294336283321,1,Time it Takes to Complete Tasks,enum

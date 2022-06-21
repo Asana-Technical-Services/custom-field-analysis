@@ -1,0 +1,2 @@
+[console_scripts]
+projectupload = fieldanalysis.fieldanalysis:main

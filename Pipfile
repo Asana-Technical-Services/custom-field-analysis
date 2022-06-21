@@ -4,8 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-requests = "*"
-build = "*"
+aiohttp = "*"
 
 [dev-packages]
 
