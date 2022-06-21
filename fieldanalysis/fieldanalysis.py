@@ -97,7 +97,7 @@ async def projectupload():
             "created_by_name",
             "created_by_email",
             "is_global_to_workspace",
-            "enum_value_names",
+            "enum_option_names",
         ]
 
         with open(fileName, "w") as csvfile:
@@ -138,13 +138,14 @@ if __name__ == "__main__":
 
 def flatten_custom_field_values(custom_field):
 
-    if "enum_values" in custom_field:
-        new_enum_values = []
-        custom_field["enum_values"] = list(custom_field["enum_values"])
-        for value in custom_field["enum_values"]:
-            new_enum_values.append(dict(value)["name"])
+    if "enum_options" in custom_field:
+        new_enum_options = []
+        custom_field["enum_options"] = list(custom_field["enum_options"])
 
-        custom_field["enum_value_names"] = new_enum_values
+        for value in custom_field["enum_options"]:
+            new_enum_options.append(dict(value)["name"])
+
+        custom_field["enum_option_names"] = new_enum_options
 
     if "created_by" in custom_field and custom_field["created_by"] != None:
         custom_field["created_by"] = dict(custom_field["created_by"])
