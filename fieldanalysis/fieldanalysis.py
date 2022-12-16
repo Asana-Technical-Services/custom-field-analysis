@@ -20,32 +20,28 @@ import csv
 
 
 async def projectupload():
-    """an async function to upload projects from a CSV to a portfolio in Asana"""
+    """an async function to get all custom fields in Asana"""
 
     ## create the client session with aiohttp - this library allows us to send multiple API requests at once in conjunction with asyncio
     async with aiohttp.ClientSession() as session:
 
         [
             workspace,
+            workspace_name,
+            projects_flag,
             token,
         ] = await menu(session)
 
-        customFieldCounter = {}
-
-        # get all projects in a workspace
         hasMore = True
-        requests = []
-        results = []
         limit = 100
         offset = ""
-        url = f"/workspaces/{workspace}/projects?limit={limit}&opt_fields=custom_field_settings.custom_field.(name|type|created_by|enum_options|is_global_to_workspace).(name|email)"
+        url = f"/workspaces/{workspace}/custom_fields?limit={limit}&opt_fields=gid,name,type,created_by.(name|email),enum_options"
 
-        totalcount = 0
-
+        custom_fields = {}
         while hasMore == True:
 
             if offset != "":
-                url = f"/workspaces/{workspace}/projects?limit={limit}&opt_fields=custom_field_settings.custom_field.(name|type|created_by|enum_options|is_global_to_workspace).(name|email)&offset={offset}"
+                url = f"/workspaces/{workspace}/custom_fields?limit={limit}&opt_fields=gid,name,type,created_by.(name|email),enum_options&offset={offset}"
 
             result = await asana_client(
                 **{
@@ -55,8 +51,11 @@ async def projectupload():
                     "token": token,
                 }
             )
+            print(result)
 
-            projects = result["data"]
+            for cf in result["data"]:
+                custom_fields[cf["gid"]] = flatten_custom_field_values(cf)
+                custom_fields[cf["gid"]]["project_count"] = 0
 
             if "next_page" in result:
                 if result["next_page"] != None:
@@ -66,32 +65,8 @@ async def projectupload():
             else:
                 hasMore = False
 
-            for project in projects:
-                totalcount += 1
-                for customFieldSetting in project["custom_field_settings"]:
-                    if customFieldSetting["custom_field"]["gid"] in customFieldCounter:
-                        customFieldCounter[customFieldSetting["custom_field"]["gid"]][
-                            "count"
-                        ] += 1
-                    else:
-                        customFieldCounter[
-                            customFieldSetting["custom_field"]["gid"]
-                        ] = flatten_custom_field_values(
-                            customFieldSetting["custom_field"]
-                        )
-
-                        customFieldCounter[customFieldSetting["custom_field"]["gid"]][
-                            "count"
-                        ] = 1
-            print(f"analyzed {totalcount} projects")
-
-        print("done!")
-
-        fileName = "Asana_Custom_Field_Audit_Sheet.csv"
-
         headers = [
             "gid",
-            "count",
             "name",
             "type",
             "created_by_name",
@@ -100,12 +75,70 @@ async def projectupload():
             "enum_option_names",
         ]
 
+        if projects_flag:
+
+            # get all custom fields in a workspace
+            hasMore = True
+            limit = 100
+            offset = ""
+            url = f"/workspaces/{workspace}/projects?limit={limit}&opt_fields=custom_field_settings.custom_field.gid"
+
+            totalcount = 0
+
+            while hasMore == True:
+
+                if offset != "":
+                    url = f"/workspaces/{workspace}/projects?limit={limit}&opt_fields=custom_field_settings.custom_field.gid&offset={offset}"
+
+                result = await asana_client(
+                    **{
+                        "method": "GET",
+                        "url": url,
+                        "session": session,
+                        "token": token,
+                    }
+                )
+
+                projects = result["data"]
+
+                if "next_page" in result:
+                    if result["next_page"] != None:
+                        offset = result["next_page"]["offset"]
+                    else:
+                        hasMore = False
+                else:
+                    hasMore = False
+
+                for project in projects:
+                    totalcount += 1
+                    for customFieldSetting in project["custom_field_settings"]:
+                        if customFieldSetting["custom_field"]["gid"] in custom_fields:
+                            custom_fields[customFieldSetting["custom_field"]["gid"]][
+                                "project_count"
+                            ] += 1
+
+                print(f"analyzed {totalcount} projects")
+
+                headers = [
+                    "gid",
+                    "project_count",
+                    "name",
+                    "type",
+                    "created_by_name",
+                    "created_by_email",
+                    "enum_option_names",
+                ]
+
+        print("done!")
+
+        fileName = f"{workspace_name}_Asana_Custom_Field_Audit_Sheet.csv"
+
         with open(fileName, "w") as csvfile:
             writer = csv.DictWriter(
                 csvfile, fieldnames=headers, restval="", extrasaction="ignore"
             )
             writer.writeheader()
-            writer.writerows(list(customFieldCounter.values()))
+            writer.writerows(list(custom_fields.values()))
 
     return
 

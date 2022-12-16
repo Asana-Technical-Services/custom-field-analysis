@@ -14,7 +14,7 @@ python -V
 
 If you need to install a newer version of python, you can do so at https://www.python.org/downloads/
 
-_Be sure to install certificates (by running the appropriate script in the python folder) if you download a new version of python_
+_Be sure to install certificates (by running the "install certificates" script found in the python folder) if you download a new version of python_
 
 ## Installing the script
 
@@ -68,7 +68,7 @@ or alternatively:
 python fieldanalysis.py
 ```
 
-The script interactively asks for 4 arguments:
+The script interactively asks for 2 arguments:
 
 - a personal access token (PAT)
 - your workspace gid

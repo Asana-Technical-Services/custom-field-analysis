@@ -37,9 +37,7 @@ async def menu(session):
     # get link to portfolio and split it to get the Global ID
     workspace_gid = input("input the workspace GID you want to analyze: ")
 
-    ## split the link to get the portfolio GID number from the URL
-
-    # try getting the portfolio from Asana to make sure it exists and we can access it
+    # try getting the workspace from Asana to make sure it exists and we can access it
     workspace = await asana_client(
         **{
             "method": "GET",
@@ -54,9 +52,20 @@ async def menu(session):
             "could not get workspace or it does not exist. check that you have access to it"
         )
 
+    include_projects = input(
+        "Would you also like to count the projects that use the custom field? This can take several minutes longer, depending on your workspace size? (y/N)"
+    )
+
+    if include_projects in ["Y", "y", "yes", "Yes"]:
+        projects_flag = True
+    else:
+        projects_flag = False
+
     print("proceeding...")
 
     return [
         workspace_gid,
+        workspace["data"]["name"],
+        projects_flag,
         token,
     ]
